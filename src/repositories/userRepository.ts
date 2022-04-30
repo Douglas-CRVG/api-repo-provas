@@ -17,7 +17,7 @@ async function findByEmail(email: string) {
 }
 
 async function insert(createUserData: CreateUserData) {
-  return prisma.user.create({
+  return await prisma.user.create({
     data: createUserData,
   });
 }
